@@ -3,60 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building Maintenance Service</title>
+    <title>Building Maintenance Services - National Coverage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="hero">
-            <h1>Professional Building Maintenance Services</h1>
-            <p>Your trusted partner for all building maintenance needs.</p>
-            <a href="#contact" class="cta-button">Contact Us</a>
-        </div>
-    </header>
-    <main>
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Regular Maintenance</li>
-                <li>Emergency Repairs</li>
-                <li>Cleaning Services</li>
-                <li>Inspection and Consultation</li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">VB McLean</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </section>
-        <section id="portfolio">
-            <h2>Our Portfolio</h2>
-            <div class="portfolio-items">
-                <!-- Add images of previous works here -->
-                <img src="portfolio1.jpg" alt="Project 1">
-                <img src="portfolio2.jpg" alt="Project 2">
-                <img src="portfolio3.jpg" alt="Project 3">
+            <div class="menu-toggle">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Professional Building Maintenance Services</h1>
+            <p>Trusted by businesses nationwide. Expert maintenance, exceptional service.</p>
+            <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Preventative Maintenance</h3>
+                        <p>Regular inspections and maintenance to prevent costly repairs.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🚨</div>
+                        <h3>Emergency Repairs</h3>
+                        <p>24/7 emergency response for urgent building issues.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🧹</div>
+                        <h3>Cleaning Services</h3>
+                        <p>Professional cleaning for a pristine work environment.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🌳</div>
+                        <h3>Grounds Maintenance</h3>
+                        <p>Landscaping and outdoor area management.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💨</div>
+                        <h3>HVAC Services</h3>
+                        <p>Heating, ventilation, and air conditioning maintenance.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💡</div>
+                        <h3>Electrical Services</h3>
+                        <p>Safe and reliable electrical maintenance and repairs.</p>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="testimonials">
-            <h2>What Our Clients Say</h2>
-            <blockquote>
-                <p>"Exceptional service and professionalism! Highly recommend." - Client A</p>
-            </blockquote>
-            <blockquote>
-                <p>"They took care of everything and exceeded our expectations!" - Client B</p>
-            </blockquote>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2>Our Portfolio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-placeholder">Project 1</div>
+                        <h3>Commercial Building Maintenance</h3>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-placeholder">Project 2</div>
+                        <h3>Office Complex Renovation</h3>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-placeholder">Project 3</div>
+                        <h3>Emergency Repair Service</h3>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Exceptional service! They respond quickly and handle everything professionally."</p>
+                        <strong>- John Smith</strong>
+                        <p class="client-title">Facilities Manager, Fortune 500 Company</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Reliable, trustworthy, and always on time. Highly recommended!"</p>
+                        <strong>- Sarah Johnson</strong>
+                        <p class="client-title">Property Owner</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Best maintenance service we've used. Professional team, great results."</p>
+                        <strong>- Michael Davis</strong>
+                        <p class="client-title">Building Manager</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>VB McLean has been providing exceptional building maintenance services to businesses across the nation for years. Our team of experienced professionals is committed to keeping your property in top condition.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <h3>🌍 National Coverage</h3>
+                        <p>Serving businesses throughout the entire United States</p>
+                    </div>
+                    <div class="feature">
+                        <h3>⚡ Fast Response</h3>
+                        <p>Quick turnaround on maintenance requests and emergencies</p>
+                    </div>
+                    <div class="feature">
+                        <h3>✓ Licensed & Insured</h3>
+                        <p>Full credentials and insurance for your peace of mind</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone" required>
+                        <select required>
+                            <option value="">Select a Service</option>
+                            <option value="maintenance">Preventative Maintenance</option>
+                            <option value="emergency">Emergency Repair</option>
+                            <option value="cleaning">Cleaning Services</option>
+                            <option value="hvac">HVAC Services</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea placeholder="Tell us about your needs..." rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p><strong>Phone:</strong> 1-800-VB-CLEAN</p>
+                        <p><strong>Email:</strong> info@vbmclean.com</p>
+                        <p><strong>Service Area:</strong> National Coverage</p>
+                        <p><strong>Hours:</strong> 24/7 Emergency Service Available</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-        <p>National Service Area - No Geographic Restrictions</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>VB McLean</h4>
+                    <p>Professional building maintenance services nationwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 VB McLean Building Maintenance. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
