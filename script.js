@@ -1,48 +1,56 @@
-// script.js
+// Enhanced JavaScript for Mobile Menu Toggle, Smooth Scrolling, Form Validation, and Scroll Animations
 
-// Smooth Scrolling Navigation
-const smoothScroll = (target) => {
-    document.querySelector(target).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
     });
-};
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        smoothScroll(this.getAttribute('href'));
+    // Smooth Scrolling
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
     });
-});
 
-// Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+    // Form Validation
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+        let isValid = true;
+        const inputs = form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            if (!input.value) {
+                isValid = false;
+                input.classList.add('error');
+            } else {
+                input.classList.remove('error');
+            }
+        });
+        if (!isValid) {
+            e.preventDefault();
+            alert('Please fill all fields.');
+        }
+    });
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+    // Scroll Animations
+    const animatedElements = document.querySelectorAll('.animate');
+    const handleScrollAnimation = () => {
+        animatedElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (elementTop < windowHeight - 100) {
+                element.classList.add('fade-in');
+            }
+        });
+    };
 
-// Form Validation
-const form = document.querySelector('form');
-form.addEventListener('submit', (e) => {
-    let valid = true;
-    const email = form.querySelector('input[type="email"]').value;
-    const name = form.querySelector('input[name="name"]').value;
-    
-    if (name === '') {
-        valid = false;
-        alert('Name is required.');
-    }
-    if (email === '') {
-        valid = false;
-        alert('Email is required.');
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-        valid = false;
-        alert('Email is invalid.');
-    }
-    
-    if (!valid) {
-        e.preventDefault();
-    }
+    window.addEventListener('scroll', handleScrollAnimation);
+    handleScrollAnimation(); // Initial check on load
 });
